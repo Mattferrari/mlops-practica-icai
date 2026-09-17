@@ -19,7 +19,7 @@ with mlflow.start_run():
     )
 
     # Inicializar y entrenar el modelo
-    model = RandomForestClassifier(n_estimators=100, random_state=42)
+    model = RandomForestClassifier(n_estimators=200, random_state=42)
     model.fit(X_train, y_train)
 
     # Realizar predicciones y calcular la precision
@@ -33,7 +33,7 @@ with mlflow.start_run():
     mlflow.sklearn.log_model(model, "random-forest-model")
 
     # Registrar parametros y metricas
-    mlflow.log_param("n_estimators", 100)
+    mlflow.log_param("n_estimators", 200)
     mlflow.log_metric("accuracy", accuracy)
 
     print(f"Modelo entrenado y precision: {accuracy:.4f}")
