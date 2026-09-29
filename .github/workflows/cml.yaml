@@ -47,7 +47,7 @@ jobs:
           pip install pyyaml
           pip install -r requirements.txt
 
-      - uses: iterative/setup-cml@v1
+      - uses: iterative/setup-cml@v2
 
       - name: Run training script
         env:
