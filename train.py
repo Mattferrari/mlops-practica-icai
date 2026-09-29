@@ -38,7 +38,7 @@ with mlflow.start_run():
     accuracy = accuracy_score(y_test, y_pred)
 
     joblib.dump(model, 'model.pkl')
-    mlflow.sklearn.log_model(model, name="random-forest-model")
+    mlflow.sklearn.log_model(model, name="random-forest-model", serialization_format="cloudpickle")
 
     mlflow.log_param("n_estimators", 300)
     mlflow.log_metric("accuracy", accuracy)
