@@ -2,3 +2,8 @@ __pycache__/
 *.pkl
 *.json
 mlruns/
+miniconda.sh
+mlflow.db
+mlruns/
+model.pkl
+confusion_matrix.png
