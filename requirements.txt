@@ -5,3 +5,4 @@ dvc==3.32.0
 mlflow
 matplotlib
 seaborn
+pathspec<1.0
